@@ -1,0 +1,265 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #813c0e, #522b08);
+  color: #7c6d6d;
+}
+
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logout button */
+.logout-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.logout-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.logout-btn:hover {
+  background: #d32f2f;
+}
+
+/* Header / hero */
+header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: url('https://abirpothi.com/wp-content/uploads/2024/07/Courtesy-Pravasi-Bhartiya-Divas.png') center/cover no-repeat;
+  border-radius: 30px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.4);
+  border-radius: 30px;
+}
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+}
+.hero-content h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  color: #fff;
+  background: linear-gradient(to right, #4697a5, #2553b6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.hero-content .location-badge {
+  background: rgba(255,255,255,0.9);
+  color: #ff5722;
+  padding: 8px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* Container for sections */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Sections */
+section {
+  background: rgb(20, 95, 100);
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Section headings */
+h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Cards grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+.card {
+  background: linear-gradient(135deg, #0f022e, #440418);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.card h3 {
+  color: #bdacac;
+  margin-bottom: 10px;
+}
+
+/* Transport list */
+.transport-info li {
+  background: #0f021d;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-left: 4px solid #0d0d0e;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+/* Expense tracker */
+.expense-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.expense-form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+.expense-form button {
+  padding: 12px 20px;
+  background: #031252;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: #f3e5f5;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.expense-item button {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.total {
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: right;
+  padding: 15px;
+  background: #e8f5e8;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.action-buttons {
+  margin-top: 15px;
+}
+.btn-save {
+  background: #43cea2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.btn-reset {
+  background: #ffcdd2;
+  color: #c62828;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FAQ */
+.faq-item {
+  margin: 15px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.faq-question {
+  background: #e2d8d8;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.faq-answer {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #f5ebeb;
+}
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  background: rgba(32, 10, 53, 0.8);
+  border-radius: 20px 20px 0 0;
+}
+footer .fa-heart {
+  color: #630505;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container, header {
+    margin: 20px;
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .expense-form {
+    flex-direction: column;
+  }
+}
